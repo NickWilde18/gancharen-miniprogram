@@ -1,0 +1,65 @@
+<!--pages/test_p/test_p.wxml-->
+<container class="block_s">
+<view>第一题：在参加一场派对的时候，你是……</view>
+<radio-group class="radio" bindchange="Q1Change">
+  <radio color="green" value="E">尽兴而归，玩的很开心</radio>
+  <radio color="green" value="I">迫不及待地想要回家充电</radio>
+</radio-group>
+
+<text>\n</text>
+
+<view>第二题：什么样的人会更吸引你？</view>
+<radio-group class="radio" bindchange="Q2Change">
+  <radio color="green" value="N">一个思想敏捷以及非常聪颖的人</radio>
+  <radio color="green" value="S">实事求是，具有丰富常识的</radio>
+</radio-group>
+
+<text>\n</text>
+
+<view>第三题：在下面两个词语中，哪一个词语更合你的心意？</view>
+<radio-group class="radio" bindchange="Q3Change">
+  <radio color="green" value="F">温柔的</radio>
+  <radio color="green" value="T">坚定的</radio>
+</radio-group>
+
+<text>\n</text>
+
+<view>第四题：当你要规划一场旅行的时候，你会……</view>
+<radio-group class="radio" bindchange="Q4Change">
+  <radio color="green" value="J">计划你要做什么和什么时候去</radio>
+  <radio color="green" value="P">说去就去</radio>
+</radio-group>
+
+<text>\n</text>
+
+<view>第五题：您的性别是？</view>
+<radio-group class="radio" bindchange="Q5Change">
+  <radio color="green" value="B">男</radio>
+  <radio color="green" value="G">女</radio>
+</radio-group>
+
+<text>\n</text>
+
+<view>第六题：是否手脚容易发凉，容易脱发？</view>
+<radio-group class="radio" bindchange="Q6Change">
+  <radio color="green" value="Y">是</radio>
+  <radio color="green" value="N">否</radio>
+</radio-group>
+
+<text>\n</text>
+
+<view wx:if="{{q6_flag}}">第七题：是否有体型偏瘦、睡眠较差、面色苍暗的情况？</view>
+<radio-group wx:if="{{q6_flag}}" class="radio" bindchange="Q7Change">
+  <radio color="green" value="Y">是</radio>
+  <radio color="green" value="N">否</radio>
+</radio-group>
+
+<text>\n</text>
+
+</container>
+
+<view class='button_bottom'>
+<button bindtap="sta" type="primary" >提交</button>
+</view>
+
+<text>\n\n</text>

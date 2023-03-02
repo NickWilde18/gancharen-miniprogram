@@ -1,0 +1,135 @@
+/* pages/result/result.wxss */
+page {
+  /*background-image: url("https://1708v513b2.goho.co/backg.jpg");*/
+  background-color:lightblue;
+  height: 100%;
+  width: 100%;
+  font-size: 35rpx;
+  font-weight:bold;
+}
+
+.block_all {
+  margin-top: 7%;
+  margin-left: 5%;
+  margin-right: 5%;
+}
+
+.cent {
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  display: flex;
+}
+
+.cent_p {
+  justify-content: center;
+  display: flex;
+}
+
+p {
+  /*font-family: "微软雅黑";*/
+  /*设置字体*/
+  font-size: 140rpx;
+  font-weight: bold;
+  /*设置文字大小*/
+  /* color:green;    设置文字颜色*/
+  color:black;
+  text-align: center;
+  font-weight:900;
+  /*设置文字居中*/
+}
+
+.half {
+  height: 80rpx;
+  /*设置元素高度*/
+  position: absolute;
+  /*绝对定位*/
+  overflow: hidden;
+  /*隐藏溢出部分内容*/
+  /* color:orange;  /*设置文字颜色*/
+  color:black;
+}
+
+.shine {
+  width: 100%;
+  font-family: "Microsoft YaHei";
+  font-size: 45rpx;
+  /*text-align: center;*/
+  background: -webkit-linear-gradient(left, #0f0, #00f) 0 0 no-repeat;
+  /*设置线性渐变*/
+  -webkit-background-size: 80px;
+  /*设置背景大小*/
+  -webkit-background-clip: text;
+  /*背景被裁剪到文字*/
+  -webkit-text-fill-color: rgba(236, 75, 11, 0.345);
+  /*设置文字的填充颜色*/
+  -webkit-animation: shine 2s infinite;
+  /*设置动画*/
+}
+
+@-webkit-keyframes shine {
+
+  /*创建动画*/
+  0% {
+    background-position: 0 0;
+  }
+
+  100% {
+    background-position: 100% 100%;
+  }
+}
+
+.flicker {
+  color: #9966FF;
+  /*设置文字颜色*/
+  font-size: 25px;
+  /*设置字体大小*/
+  font-weight: bolder;
+  /*设置字体粗细*/
+  -webkit-animation: flicker 2s infinite;
+  /*设置动画*/
+}
+
+@-webkit-keyframes flicker {
+
+  /*创建动画*/
+  0% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0.5;
+  }
+
+  100% {
+    opacity: 1;
+  }
+
+}
+
+.view_fengexian {
+  width: 96%;
+  height: 50rpx;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin: 0rpx 2% 0rpx 2%;
+}
+
+/* 两个view的样式 */
+.view_fengexian view {
+  width: 35%;
+  height: 2rpx;
+  /*background: linear-gradient(to right, #ead6ee, #a0f1ea);*/
+  background:linear-gradient(to right, #000000,#000000);
+}
+
+/* 字体的样式 */
+.text_fengexian {
+  font-size: 25rpx;
+  /*color: rgb(253, 143, 143);*/
+  color:black;
+  font-weight:lighter;
+  margin: 0rpx 2% 0rpx 2%;
+}

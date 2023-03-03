@@ -48,5 +48,4 @@
 <button bindtap="exit" type="primary">退出小程序，返回购买页面>></button>
 <text>\n</text>
 <button bindtap="back_index" type="warn">返回首页再测一次</button>
-
 <text>\n\n</text>

@@ -1,6 +1,5 @@
  /**app.wxss**/
 page{
-  font-family :"STZHONGS";
 }
 
 .container {

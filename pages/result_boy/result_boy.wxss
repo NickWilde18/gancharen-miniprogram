@@ -1,11 +1,12 @@
 /* pages/result/result.wxss */
 page {
   /*background-image: url("https://1708v513b2.goho.co/backg.jpg");*/
-  background-color:lightblue;
+  background-color: lightblue;
   height: 100%;
   width: 100%;
   font-size: 35rpx;
-  font-weight:bold;
+  font-weight: bold;
+  font-family: "STZHONGS";
 }
 
 .block_all {
@@ -33,9 +34,9 @@ p {
   font-weight: bold;
   /*设置文字大小*/
   /* color:green;    设置文字颜色*/
-  color:black;
+  color: black;
   text-align: center;
-  font-weight:900;
+  font-weight: 900;
   /*设置文字居中*/
 }
 
@@ -47,7 +48,7 @@ p {
   overflow: hidden;
   /*隐藏溢出部分内容*/
   /* color:orange;  /*设置文字颜色*/
-  color:black;
+  color: black;
 }
 
 .shine {
@@ -122,14 +123,14 @@ p {
   width: 35%;
   height: 2rpx;
   /*background: linear-gradient(to right, #ead6ee, #a0f1ea);*/
-  background:linear-gradient(to right, #000000,#000000);
+  background: linear-gradient(to right, #000000, #000000);
 }
 
 /* 字体的样式 */
 .text_fengexian {
   font-size: 25rpx;
   /*color: rgb(253, 143, 143);*/
-  color:black;
-  font-weight:lighter;
+  color: black;
+  font-weight: lighter;
   margin: 0rpx 2% 0rpx 2%;
 }

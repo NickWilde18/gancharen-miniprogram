@@ -220,11 +220,6 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad(options) {
-    wx.loadFontFace({
-      family: 'STZHONGS',
-      source: 'url("https://1708v513b2.goho.co/STZHONGS.TTF")',
-      success: console.log
-    });
     if (options.extra[0] == 'G') {
       this.setData({
         name: this.data.dic[options.answer]["girl_name"],
@@ -332,6 +327,5 @@ Page({
   onShareAppMessage() {
   },
   onShareTimeline(){
-
   },
 })

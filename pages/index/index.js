@@ -11,12 +11,7 @@ Page({
     });
   },
   onLoad() {
-    wx.loadFontFace({
-      family: 'STZHONGS',
-      source: 'url("https://1708v513b2.goho.co/STZHONGS.TTF")',
-      success: console.log,
-      fail: console.log
-    })
+
   },
   onShareAppMessage() {},
   onShareTimeline() {},

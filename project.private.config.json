@@ -10,7 +10,7 @@
         {
           "name": "T_F",
           "pathName": "pages/result_girl/result_girl",
-          "query": "answer=ISFP&extra=GNY",
+          "query": "answer=ESFP&extra=GNY",
           "launchMode": "default",
           "scene": null
         }

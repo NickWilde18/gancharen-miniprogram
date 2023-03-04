@@ -1,7 +1,11 @@
  /**app.wxss**/
-page{
+@font-face {
+  font-family:'STZHONGS';
+  src:url('https://7869-xinhuocloud-9gyb31w57af6eb86-1317102184.tcb.qcloud.la/STZhongsong.woff2?sign=f730572650f32a7d2e97613b952423d4&t=1677909282') format('woff2');
 }
-
+page {
+  font-family: "STZHONGS";
+}
 .container {
   height: 100%;
   display: flex;

@@ -1,12 +1,10 @@
 /* pages/result/result.wxss */
 page {
-  /*background-image: url("https://1708v513b2.goho.co/backg.jpg");*/
   background-color: lightblue;
   height: 100%;
   width: 100%;
   font-size: 35rpx;
   font-weight: bold;
-  font-family: "STZHONGS";
 }
 
 .block_all {

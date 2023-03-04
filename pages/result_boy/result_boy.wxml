@@ -4,8 +4,6 @@
   <view style="width:63%"></view>
 </view>
 <view class="block_all">
-  <!--<text decode="True" style="font-style: italic; display:flex; justify-content: center;">╰(*°▽°*)╯恭喜你完成测试！ヾ(≧▽≦*)o\n
-  </text>-->
   <view class="cent">经测试，你的性格是：</view>
   <p class="cent_p">
     <!--<view class="half">{{name}}</view>-->

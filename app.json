@@ -1,7 +1,6 @@
 {
   "pages":[
     "pages/index/index",
-    "pages/logs/logs",
     "pages/test_p/test_p",
     "pages/result_boy/result_boy",
     "pages/result_girl/result_girl"

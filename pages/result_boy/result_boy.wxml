@@ -14,7 +14,6 @@
   <view class="cent">
     <text style="border-color: azure; border-width:3px;border-style: dotted;">↓↓↓个性解读↓↓↓</text>
   </view>
-
   <view style="  display: flex; align-items: center; vertical-align: center; justify-content: center; flex-direction:row; ">
     <text class="shine" style="text-align:center">{{description}}\n\n</text>
   </view>
@@ -42,11 +41,10 @@
   <text class="text_fengexian">——————————</text>
   <view></view>
 </view>
-
-<text>\n</text>
-
-<button bindtap="exit" type="primary">退出小程序，返回购买页面>></button>
-<text>\n</text>
+<view class='cent'>
+  <text style="text-align: center;">\n快点击下方二维码\n关注新火甘茶人公众号，即刻下单！</text>
+  <image mode="aspectFit" src="https://7869-xinhuocloud-9gyb31w57af6eb86-1317102184.tcb.qcloud.la/shop_link.png?sign=22bc123b931ca2a76dd07f48634db2be&t=1677918622" show-menu-by-longpress="true" style="width:300rpx;height:300rpx;"></image>
+</view>
+<text class='cent'>\n或者...\n\n</text>
 <button bindtap="back_index" type="warn">返回首页再测一次</button>
-
-<text>\n\n</text>
+<text class='cent' style="font-size:20rpx;">\n\n(若因网络原因未完全加载出来，请您尝试手动刷新，谢谢！）\n\n</text>

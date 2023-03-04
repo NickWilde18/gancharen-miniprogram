@@ -9,7 +9,9 @@
   <text>选择脑海中第一个答案</text>
   <text>\n🌸🌼看看自己最适合哪种花花呢～🌷🌺\n\n</text>
 
-  <button bindtap="jump_test" style="width:60%">点击这里开始测试>>></button>
-
+  <button bindtap="jump_test" style="width:60%" type="primary">点击这里开始测试>>></button>
+  <text>\n想查询一下已购买花茶的功效？\n</text>
+  <text>或者不想做测试？\n\n</text>
+  <button bindtap="jump_search" style="width:70%">点击这里也可以进行自定义筛选哦🤭</button>
   <text style="position:fixed; bottom:3%; text-align: center; font-size:25rpx;">温馨提示：本测试没有覆盖全部产品，测试结果仅供参考，请根据自身需求合理选购。</text>
 </view>

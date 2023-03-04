@@ -3,13 +3,16 @@
     "pages/index/index",
     "pages/test_p/test_p",
     "pages/result_boy/result_boy",
-    "pages/result_girl/result_girl"
+    "pages/result_girl/result_girl",
+    "pages/search/search",
+    "pages/list/list"
   ],
   "window":{
     "backgroundTextStyle":"light",
     "navigationBarBackgroundColor": "#fff",
     "navigationBarTitleText": "甘茶人个性测试",
     "navigationBarTextStyle":"black"
+
   },
   "style": "v2",
   "sitemapLocation": "sitemap.json"

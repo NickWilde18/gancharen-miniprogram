@@ -58,13 +58,6 @@ Page({
   },
   sta() {
     var final_answer = this.data.q1a + this.data.q2a + this.data.q3a + this.data.q4a;
-    /* if ((final_answer.length < 4) || (this.data.q5a == "") || (this.data.q6a == "") || (this.data.q6a == 'N' && this.data.q7a == "")) {
-       wx.showToast({
-         title: '请选择全部选项',
-         icon: 'error',
-         duration: 1000,
-       });
-     } else {*/
     if (this.data.q6a == "Y") {
       this.setData({
         q7a: "Z"

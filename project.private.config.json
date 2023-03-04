@@ -13,6 +13,13 @@
           "query": "answer=ESFP&extra=GNY",
           "launchMode": "default",
           "scene": null
+        },
+        {
+          "name": "se",
+          "pathName": "pages/search/search",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
         }
       ]
     }

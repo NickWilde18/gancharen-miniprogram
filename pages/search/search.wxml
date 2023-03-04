@@ -1,0 +1,38 @@
+<!--pages/search/search.wxml-->
+<button bindtap="jump_list" style="width:80%;height:60rpx;display: flex;justify-content: center;align-items: center;" type="primary">或点此查看我们所有的商品</button>
+<view style="display: flex;justify-content: center; ">
+  <text style="font-size: 45rpx; font-weight: bold; text-decoration: underline;">\n花茶功效查询</text>
+</view>
+<view>
+  <view style='display:flex;flex-direction: column; margin-left:5%;margin-right:5%'>
+    <text>您可以在此处输入 花茶名称 和/或 功效来查询或筛选我们的花茶：\n\n</text>
+    <input bindinput='handle_input_name' placeholder='请在此处输入花茶名称'></input>0
+    <view class="000000">
+    /
+    </view>
+    <radio-group style="margin-top:20rpx;">
+      条件：
+      <radio checked='{{checked_and}}' value='and' bindtap='and_t'>与</radio>
+      <radio checked='{{checked_or}}' value='or' bindtap='or_t'>或</radio>
+    </radio-group>
+    <input style="margin-top:20rpx;" bindinput='handle_input_eff' placeholder='请在此处输入预期功效'></input>
+  </view>
+</view>
+
+<view>
+  <view class='table' style="margin-left: 2.5%;">
+    <text style='font-weight: bold; font-style: italic; font-size:38rpx;'>筛选结果：</text>
+    <view class='tr'>
+      <view class='th1'>商品名称</view>
+      <view class='th2'>功效</view>
+      <view class="th3">所属系列</view>
+    </view>
+    <view wx:for="{{ne}}">
+      <view class='tr'>
+        <view class='td1'>{{item.name}}</view>
+        <view class='td2'>{{item.eff}}</view>
+        <view class='td3'>{{item.series}}</view>
+      </view>
+    </view>
+  </view>
+</view>

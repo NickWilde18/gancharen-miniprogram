@@ -6,10 +6,7 @@
 <view>
   <view style='display:flex;flex-direction: column; margin-left:5%;margin-right:5%'>
     <text>您可以在此处输入 花茶名称 和/或 功效来查询或筛选我们的花茶：\n\n</text>
-    <input bindinput='handle_input_name' placeholder='请在此处输入花茶名称'></input>0
-    <view class="000000">
-    /
-    </view>
+    <input bindinput='handle_input_name' placeholder='请在此处输入花茶名称'></input>
     <radio-group style="margin-top:20rpx;">
       条件：
       <radio checked='{{checked_and}}' value='and' bindtap='and_t'>与</radio>

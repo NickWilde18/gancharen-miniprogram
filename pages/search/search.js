@@ -9,6 +9,7 @@ Page({
     keywords: "",
     /*name*/
     keyeffs: "",
+    total_number:0,
     /*effect*/
     checked_or: false,
     checked_and: true,
@@ -27,28 +28,10 @@ Page({
       keywords: e.detail.value,
     });
     if ((this.data.keywords != "") || (this.data.keyeffs != "")) {
-      this.search_result();
-    } else {
-      if ((this.data.keywords == "") && (this.data.keyeffs == "")) {
-        this.setData({
-          keywords: "###",
-          keyeffs: "",
-          checked_and:true,
-          checked_or:false,
-        });
-        this.search_result();
-        this.setData({
-          keywords: "",
-          keyeffs: "",
-        });
-      }
-    };
-  },
-  handle_input_eff(e) {
-    this.setData({
-      keyeffs: e.detail.value,
-    });
-    if ((this.data.keywords != "") || (this.data.keyeffs != "")) {
+      this.setData({
+        checked_and:true,
+        checked_or:false,
+      });
       this.search_result();
     } else {
       if ((this.data.keywords == "") && (this.data.keyeffs == "")) {
@@ -66,11 +49,37 @@ Page({
       }
     };
   },
-  search_result() {
+  handle_input_eff(e) {
+    this.setData({
+      keyeffs: e.detail.value,
+    });
+    if ((this.data.keywords != "") || (this.data.keyeffs != "")) {
+      this.setData({
+        checked_and:true,
+        checked_or:false,
+      });
+      this.search_result();
+    } else {
+      if ((this.data.keywords == "") && (this.data.keyeffs == "")) {
+        this.setData({
+          keywords: "###",
+          keyeffs: "",
+          checked_and: true,
+          checked_or: false,
+        });
+        this.search_result();
+        this.setData({
+          keywords: "",
+          keyeffs: "",
+        });
+      }
+    };
+  },
+  async search_result() {
     const db = wx.cloud.database().collection('flowertea');
     const _ = wx.cloud.database().command;
     if (this.data.checked_or) {
-      db.where(_.or([{
+      var result = db.where(_.or([{
         name: {
           $regex: '.*' + this.data.keywords + '.*',
           $options: 'i'
@@ -80,16 +89,11 @@ Page({
           $regex: '.*' + this.data.keyeffs + '.*',
           $options: 'i'
         }
-      }])).get({
-        success: res => {
-          this.setData({
-            ne: res.data
-          });
-        }
-      });
+      }]));
+
     } else
     if (this.data.checked_and) {
-      db.where(_.and([{
+      var result = db.where(_.and([{
         name: {
           $regex: '.*' + this.data.keywords + '.*',
           $options: 'i'
@@ -99,14 +103,22 @@ Page({
           $regex: '.*' + this.data.keyeffs + '.*',
           $options: 'i'
         }
-      }])).get({
-        success: res => {
-          this.setData({
-            ne: res.data
-          });
-        }
-      });
+      }]));
     };
+    let count = result.count();
+    count = (await count).total;
+    console.log(count);
+    this.setData({
+      total_number:count,
+    });
+    let all = [];
+    for (let i = 0; i < count; i += 20) {
+      let list = await result.skip(i).get();
+      all = all.concat(list.data);
+    };
+    this.setData({
+      ne: all,
+    });
   },
   or_t() {
     this.setData({

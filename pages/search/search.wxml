@@ -1,18 +1,26 @@
 <!--pages/search/search.wxml-->
-<button bindtap="jump_list" style="width:80%;height:60rpx;display: flex;justify-content: center;align-items: center;" type="primary">或点此查看我们所有的商品</button>
+<button bindtap="jump_list" style="width:100%;height:60rpx;display: flex;justify-content: center;align-items: center;" type="warn">{{words}}</button>
 <view style="display: flex;justify-content: center; ">
-  <text style="font-size: 45rpx; font-weight: bold; text-decoration: underline;">\n花茶功效查询</text>
+  <text style="font-size: 47rpx; font-weight: bold; text-decoration: underline;">\n花茶功效查询</text>
 </view>
-<view>
-  <view style='display:flex;flex-direction: column; margin-left:5%;margin-right:5%'>
-    <text>您可以在此处输入 花茶名称 和/或 功效来查询或筛选我们的花茶：\n\n</text>
+<view style="margin-top:10px;">
+  <view style='display:flex;flex-direction: column; margin-left:5%;margin-right:5%;'>
+    <text class='notice'>您可以在此处输入</text>
+    <text class='notice' style="font-size: 40rpx; font-weight:bold; color:rgb(56, 105, 241);">花茶名称 和 功效</text>
+    <text class='notice'>来查询或筛选我们的花茶\n\n</text>
+    <text style='font-weight: bold;' user-select="true">使用方法：\n</text>
+    <text user-select="true">1. 您可以只输入其中任意一个，或者二者都输入。例如您只输入“花茶名称”，则会匹配所有含有该名称的花茶。</text>
+    <text style="margin-top:10rpx;" user-select="true">2. 当您二者都输入时，还会额外显示一个选项。\n示例：当您分别输入“百香果”和“美白”，并勾选“两者都要包含”时，则会筛选出商品名称包含“百香果”且有“美白”功效的花茶；如果勾选“满足条件之一”，则会筛选出商品名称包含“百香果”的、或者有“美白”功效的所有花茶。</text>
+    <text>\n</text>
+    <view style="font-weight: bold;">花茶名称：</view>
     <input bindinput='handle_input_name' placeholder='请在此处输入花茶名称'></input>
-    <radio-group style="margin-top:20rpx;">
+    <view style="font-weight: bold; margin-top:20rpx;">功效：</view>
+    <input bindinput='handle_input_eff' placeholder='请在此处输入功效'></input>
+    <radio-group style="margin-top:20rpx;" wx:if="{{(keywords!='')&&(keyeffs!='')}}">
       条件：
-      <radio checked='{{checked_and}}' value='and' bindtap='and_t'>与</radio>
-      <radio checked='{{checked_or}}' value='or' bindtap='or_t'>或</radio>
+      <radio color="orange" checked='{{checked_and}}' value='and' bindtap='and_t'>两者都要包含</radio>
+      <radio color="orange" checked='{{checked_or}}' value='or' bindtap='or_t'>满足条件之一</radio>
     </radio-group>
-    <input style="margin-top:20rpx;" bindinput='handle_input_eff' placeholder='请在此处输入预期功效'></input>
   </view>
 </view>
 
@@ -21,7 +29,7 @@
     <text style='font-weight: bold; font-style: italic; font-size:38rpx;'>筛选结果：</text>
     <view class='tr'>
       <view class='th1'>商品名称</view>
-      <view class='th2'>功效</view>
+      <view class='th2'>功效/配料</view>
       <view class="th3">所属系列</view>
     </view>
     <view wx:for="{{ne}}">
@@ -33,3 +41,4 @@
     </view>
   </view>
 </view>
+<text>\n</text>

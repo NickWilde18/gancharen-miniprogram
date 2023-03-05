@@ -42,7 +42,7 @@
   <view></view>
 </view>
 <view class='cent'>
-  <text style="text-align: center;">\n快点击下方二维码\n关注新火甘茶人公众号，即刻下单！</text>
+  <text style="text-align: center;">\n快长按下方二维码\n进入并关注新火甘茶人公众号，即刻下单！</text>
   <image mode="aspectFit" src="https://7869-xinhuocloud-9gyb31w57af6eb86-1317102184.tcb.qcloud.la/shop_link.png?sign=22bc123b931ca2a76dd07f48634db2be&t=1677918622" show-menu-by-longpress="true" style="width:300rpx;height:300rpx;"></image>
 </view>
 <text class='cent'>\n或者...\n\n</text>

@@ -1,7 +1,8 @@
 /* pages/search/search.wxss */
-page{
-  font-size:30rpx;
+page {
+  font-size: 30rpx;
 }
+
 .table {
   display: flex;
   flex-direction: column;
@@ -15,8 +16,8 @@ page{
   flex-direction: row;
 }
 
-input{
-  border-bottom:1px solid yellowgreen;
+input {
+  border-bottom: 1px solid yellowgreen;
 }
 
 .th1,
@@ -26,6 +27,7 @@ input{
 .td2,
 .td3 {
   /* 公有的属性 */
+  user-select: text;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -75,4 +77,9 @@ input{
 .td3 {
   background-color: #edf3e9;
   /* 背景色 */
+}
+
+.notice {
+  text-align: center;
+  font-size:36rpx;
 }

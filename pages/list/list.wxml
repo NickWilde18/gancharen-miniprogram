@@ -4,12 +4,14 @@
     <text style='font-weight: bold; font-size:50rpx; text-align: center;'>新火-甘茶人 花茶店</text>
     <text style="text-align: center;">商品目录</text>
     <view class='tr'>
+      <view class='th0'>序号</view>
       <view class='th1'>商品名称</view>
-      <view class='th2'>功效</view>
+      <view class='th2'>功效/配料</view>
       <view class="th3">所属系列</view>
     </view>
     <view wx:for="{{ne}}">
       <view class='tr'>
+        <view class='td0'>{{item._id}}</view>
         <view class='td1'>{{item.name}}</view>
         <view class='td2'>{{item.eff}}</view>
         <view class='td3'>{{item.series}}</view>
@@ -17,4 +19,4 @@
     </view>
   </view>
 </view>
-<text>\n\n</text>
+<text>\n</text>

@@ -6,10 +6,13 @@ Page({
    */
   data: {
     ne: {},
-    keywords: "",  /*name*/
-    keyeffs: "", /*effect*/
-    checked_or:false,
-    checked_and:true,
+    keywords: "",
+    /*name*/
+    keyeffs: "",
+    /*effect*/
+    checked_or: false,
+    checked_and: true,
+    words: ">>点此可查看我们的所有产品哦~😉<<",
   },
 
   /**
@@ -17,19 +20,51 @@ Page({
    */
   onLoad(options) {
     wx.cloud.init();
-    this.search_result();
+    // this.search_result();
   },
   handle_input_name(e) {
     this.setData({
       keywords: e.detail.value,
     });
-    this.search_result();
+    if ((this.data.keywords != "") || (this.data.keyeffs != "")) {
+      this.search_result();
+    } else {
+      if ((this.data.keywords == "") && (this.data.keyeffs == "")) {
+        this.setData({
+          keywords: "###",
+          keyeffs: "",
+          checked_and:true,
+          checked_or:false,
+        });
+        this.search_result();
+        this.setData({
+          keywords: "",
+          keyeffs: "",
+        });
+      }
+    };
   },
   handle_input_eff(e) {
     this.setData({
       keyeffs: e.detail.value,
     });
-    this.search_result();
+    if ((this.data.keywords != "") || (this.data.keyeffs != "")) {
+      this.search_result();
+    } else {
+      if ((this.data.keywords == "") && (this.data.keyeffs == "")) {
+        this.setData({
+          keywords: "###",
+          keyeffs: "",
+          checked_and: true,
+          checked_or: false,
+        });
+        this.search_result();
+        this.setData({
+          keywords: "",
+          keyeffs: "",
+        });
+      }
+    };
   },
   search_result() {
     const db = wx.cloud.database().collection('flowertea');
@@ -73,17 +108,17 @@ Page({
       });
     };
   },
-  or_t(){
+  or_t() {
     this.setData({
-      checked_and:!this.data.checked_and,
-      checked_or:!this.data.checked_or,
+      checked_and: !this.data.checked_and,
+      checked_or: !this.data.checked_or,
     });
     this.search_result();
   },
-  and_t(){
+  and_t() {
     this.setData({
-      checked_and:!this.data.checked_and,
-      checked_or:!this.data.checked_or,
+      checked_and: !this.data.checked_and,
+      checked_or: !this.data.checked_or,
     });
     this.search_result();
   },
